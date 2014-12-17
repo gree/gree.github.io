@@ -1,0 +1,16 @@
+{
+  "name": "gree.github.io",
+  "version": "1.0.0",
+  "author": "GREE, Inc.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.7.0"
+  }
+}

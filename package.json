@@ -1,0 +1,37 @@
+{
+  "name": "gree.github.io",
+  "version": "1.0.0",
+  "description": "GREE Open Source project listing",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "chest open",
+    "help": "grunt",
+    "build": "grunt build",
+    "develop": "grunt develop",
+    "deploy": "grunt deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/gree/gree.github.io.git"
+  },
+  "author": "GREE, Inc.",
+  "license": "MIT",
+  "devDependencies": {
+    "chest": "^0.7.3",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^1.0.1",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-jst": "^0.6.0",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-gh-pages": "^0.9.1",
+    "grunt-open": "^0.2.3",
+    "less": "^1.7.5",
+    "load-grunt-tasks": "^0.6.0"
+  }
+}

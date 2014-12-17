@@ -1,0 +1,149 @@
+.card {
+  width: 220px;
+  position: relative;
+  &:before, &:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 11px;
+    width: 50%;
+    top: 80%;
+    max-width: 220px;
+    background: transparent;
+    box-shadow: 0 15px #E7E8E9;
+  }
+  &:before {
+    transform: rotate(-5deg);
+    right: auto;
+    left: 0;
+  }
+  &:after {
+    transform: rotate(5deg);
+    right: 0;
+    left: auto;
+  }
+}
+
+a.card {
+  &:hover {
+    .card__head {
+      text-decoration: underline;
+    }
+    .card__body {
+      background-color: #f7f8f9;
+    }
+  }
+}
+
+.card__head {
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  padding: 8px 10px;
+  font-size: 15px;
+  height: 40px;
+  line-height: 22px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.card__body {
+  height: 220px;
+  background-color: #fff;
+  padding: 10px;
+  line-height: 1.2;
+  li {
+    font-weight: 300;
+    margin-bottom: 3px;
+  }
+  h3 {
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  ul {
+    margin-top: 10px;
+    color: #0091cb;
+    font-size: 13px;
+  }
+  a {
+    color: #0099CC;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card__head--gray {
+  border-bottom-color: #666;
+  background-color: #666;
+  color: #fff;
+}
+
+.card__head--JavaScript {
+  border-bottom-color: #f0db4f !important;
+  background-color: #f0db4f !important;
+  color: #323330 !important;
+}
+
+.card__head--PHP {
+  border-bottom-color: #6c7eb7 !important;
+  background-color: #6c7eb7 !important;
+  color: #000 !important;
+  text-shadow: #fff 1px 1px 0px, #fff -1px 1px 0px,
+    #fff 1px -1px 0px, #fff -1px -1px 0px !important;
+}
+
+.card__head--Ruby {
+  border-bottom-color: #a40c01 !important;
+  background-color: #a40c01 !important;
+  color: #fff !important;
+}
+
+.card__head--Java {
+  border-bottom-color: #0073bc !important;
+  background-color: #fdfdfd !important;
+  color: #ea2d2e !important;
+}
+
+.card__head--Haskell {
+  border-bottom-color: #4e6272 !important;
+  background-color: #4e6272 !important;
+  color: #fff !important;
+}
+
+.card__head--C {
+  border-bottom-color: #000 !important;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.card__head--Objective-C {
+  border-bottom-color: #2698f9 !important;
+  background-color: #2698f9 !important;
+  color: #fff !important;
+}
+
+.card__head--Csharp {
+  border-bottom-color: #016632 !important;
+  background-color: #016632 !important;
+  color: #fff !important;
+}
+
+.card__head--Cplusplus {
+  border-bottom-color: #ccc !important;
+  background-color: #ccc !important;
+  color: #333 !important;
+}
+
+.card__head--error {
+  border-bottom-color: #dd4b39 !important;
+  background-color: #dd4b39 !important;
+  color: #fff !important;
+}

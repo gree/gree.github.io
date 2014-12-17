@@ -1,0 +1,83 @@
+<% for(var i = -1; repositories.length > i; i++) { %>
+  <% if ((i + 1) % 4 === 0) { %>
+<div class="flex">
+  <% } %>
+
+  <% if (i === -1) { %>
+
+  <div class="card flex__item">
+    <h2 class="card__head">
+      About Us
+    </h2>
+    <div class="card__body">
+      <h3>Making the world a better place through open source software.</h3>
+      <ul>
+        <li>
+          <a href="http://corp.gree.net/global/">
+            Corporate Site
+          </a>
+        </li>
+        <li>
+          <a href="http://corp.gree.net/global/jobs/">
+            Work With Us
+          </a>
+        </li>
+        <li>
+          <a href="http://labs.gree.jp/blog/">
+            Engineers' Blog
+          </a>
+        </li>
+        <li>
+          <a href="http://cr.gree.jp/">
+            Creators' Blog
+          </a>
+        </li>
+        <li>
+          <a href="http://corp.gree.net/jp/ja/csr/">
+            Corporate Social Responsibility
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <% } else { %>
+
+  <a
+    class="card flex__item"
+    target="_blank"
+    href="<%= (repositories[i].homepage) ? repositories[i].homepage : repositories[i].html_url %>"
+  >
+    <h2
+      class="
+        card__head
+        card__head--gray
+        card__head--<%= repositories[i].code %>">
+      <%= repositories[i].name %>
+    </h2>
+    <div class="card__body">
+      <% if (repositories[i].language) { %>
+      <p class="text--minor">
+        Language
+      </p>
+      <p class="text--strong">
+        <%= repositories[i].language %>
+      </p>
+      <% } %>
+      <% if (repositories[i].description) { %>
+      <p class="text--minor">
+        Description
+      </p>
+      <p class="text--lead">
+        <%= repositories[i].description %>
+      </p>
+      <% } %>
+    </div>
+  </a>
+
+  <% } %>
+
+  <% if ((i + 2) % 4 === 0) { %>
+</div>
+  <% } %>
+<% } %>

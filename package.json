@@ -2,7 +2,6 @@
   "name": "gree.github.io",
   "version": "1.0.0",
   "description": "GREE Open Source project listing",
-  "main": "index.js",
   "scripts": {
     "postinstall": "chest open",
     "help": "grunt",
@@ -15,7 +14,7 @@
     "url": "git@github.com/gree/gree.github.io.git"
   },
   "author": "GREE, Inc.",
-  "license": "MIT",
+  "license": "Apache License, Version 2.0",
   "devDependencies": {
     "chest": "^0.7.3",
     "grunt": "^0.4.5",

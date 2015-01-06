@@ -1,2 +1,2 @@
 #!/bin/sh
-git subtree push --prefix dest/ origin master
+git subtree push --prefix dest/ github master

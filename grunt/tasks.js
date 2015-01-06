@@ -12,13 +12,6 @@ module.exports = [
     'autoprefixer'
     ]
   }, {
-    name: 'deploy',
-    description: 'Deploy dest directory to gh-pages branch',
-    list: [
-    'build',
-    'gh-pages'
-    ]
-  }, {
     name: 'develop',
     description: 'Build all assets files and Launch connect server',
     list: [

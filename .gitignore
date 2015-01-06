@@ -29,3 +29,4 @@ node_modules
 /.jshintrc
 /Gruntfile.js
 /bower.json
+/deploy.sh

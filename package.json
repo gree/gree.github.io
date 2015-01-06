@@ -7,7 +7,7 @@
     "help": "grunt",
     "build": "grunt build",
     "develop": "grunt develop",
-    "deploy": "grunt deploy"
+    "deploy": "npm run build; ./deploy.sh"
   },
   "repository": {
     "type": "git",

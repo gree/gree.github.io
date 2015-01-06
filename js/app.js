@@ -1,4 +1,3 @@
-/* @flow */
 var App = {
   Model: {},
   Controller: {},
@@ -35,6 +34,36 @@ App.Util.getJSON = function (uri, reject, callback) {
 
   xhr.send(null);
 };
+
+App.Router = (function () {
+  "use strict";
+  function Router () {
+    this.routes = {
+      '': 'Top',
+      '#top': 'Top'
+    };
+  }
+
+  Router.prototype.Launch = function (){
+    try {
+      var hash = window.location.hash;
+      var name = this.routes[hash];
+      this[name]();
+    } catch (Exception) {
+      this.Error(Exception);
+    }
+  };
+
+  Router.prototype.Top = function () {
+    App.Controller.Repositories;
+  };
+
+  Router.prototype.Error = function (Exception) {
+    throw new Error(Exception);
+  };
+
+  return new Router();
+}());
 
 App.Model.Repositories = (function () {
   "use strict";
@@ -109,6 +138,9 @@ App.Model.Repositories = (function () {
   return new Repositories();
 }());
 
+// Initial Router Launch
+App.Router.Launch();
+
 App.Controller.Repositories = (function () {
   "use strict";
 
@@ -148,35 +180,3 @@ App.Controller.Repositories = (function () {
   init();
 }());
 
-App.Router = (function () {
-  "use strict";
-  function Router () {
-    this.routes = {
-      '': 'Top',
-      '#top': 'Top'
-    };
-  }
-
-  Router.prototype.Launch = function (){
-    try {
-      var hash = window.location.hash;
-      var name = this.routes[hash];
-      this[name]();
-    } catch (Exception) {
-      this.Error(Exception);
-    }
-  };
-
-  Router.prototype.Top = function () {
-    App.Controller.Repositories;
-  };
-
-  Router.prototype.Error = function (Exception) {
-    throw new Error(Exception);
-  };
-
-  return new Router();
-}());
-
-// Initial Router Launch
-App.Router.Launch();

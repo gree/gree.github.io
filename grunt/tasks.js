@@ -6,7 +6,7 @@ module.exports = [
     'htmlmin',
     'less',
     'jst',
-    'concat',
+    'rejs',
     'jshint',
     'uglify',
     'autoprefixer'

@@ -1,6 +1,6 @@
 module.exports = {
   'autoprefixer' : require('./autoprefixer'),
-  'concat'       : require('./concat'),
+  'rejs'         : require('./rejs'),
   'connect'      : require('./connect'),
   'gh-pages'     : require('./gh-pages'),
   'htmlmin'      : require('./htmlmin'),

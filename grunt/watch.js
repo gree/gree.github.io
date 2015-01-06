@@ -33,6 +33,6 @@ module.exports = {
       port: 5455
     },
     files: ['src/js/**/*.js'],
-    tasks: ['concat:app', 'jshint:app', 'uglify:app'],
+    tasks: ['rejs:app', 'jshint:app', 'uglify:app'],
   }
 };
